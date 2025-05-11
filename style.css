@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./assets/Imagem\ do\ WhatsApp\ de\ 2025-05-10\ à\(s\)\ 00.18.36_7c7e3517.jpg")
+      no-repeat center center fixed; 
+  background-repeat: no-repeat; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.redes-sociais a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.redes-sociais a i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.redes-sociais a[href*="instagram"] i {
+  color: #E4405F; 
+}
+
+.redes-sociais a[href*="facebook"] i {
+  color: #1877F2; 
+}
+
+.redes-sociais a[href*="youtube"] i {
+  color: #FF0000; 
+}
+
+.redes-sociais a[href*="spotify"] i {
+  color: #1DB954; 
+}
+
+.redes-sociais a[href*="wa.me"] i {
+  color: #25D366; 
+}
+
+.redes-sociais a:hover i {
+  filter: none; 
+}
+
+/* Corpo */
+main {
+  padding: 20px;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+#proximas-agendas ul {
+  list-style: none;
+  padding: 0;
+}
+
+#proximas-agendas ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 35%;
+}
+
+#proximas-agendas h2 {
+  color: white; 
+}
+
+iframe {
+  background-color: transparent; 
+  border-radius: 12px; 
+  border: none; 
+
+}
+
+
+.botao-estilizado {
+  background-color: #2cd3fd; 
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botao-estilizado:hover {
+  background-color: #1731a4; 
+  transform: scale(1.05); 
+}
+
+.botao-estilizado:active {
+  transform: scale(0.95); 
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  margin-top: auto; 
+  flex-shrink: 0; 
+}
+
+/* Carrosséis */
+.carrossel {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  font-size: 50px;
+  font-weight: bold;
+  color: white; 
+  background-color: transparent; 
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+  padding: 10px 0;
+  text-align: center;
+}
+
+.carrossel-esquerda {
+  animation: carrossel-esquerda 15s linear infinite;
+}
+
+.carrossel-direita {
+  animation: carrossel-direita 15s linear infinite;
+}
+
+@keyframes carrossel-esquerda {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes carrossel-direita {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("./assets/novo-fundo-mobile-pequeno.jpg") no-repeat center center fixed;
+    background-size: cover; 
+  }
+
+  header {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 15px; /
+  }
+
+  .redes-sociais {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+  }
+
+  .redes-sociais a {
+    font-size: 14px; 
+  }
+
+  main {
+   flex:5; 
+  }
+
+  #calendario {
+    text-align: center; 
+  }
+
+  .botao-estilizado {
+    width: 80%; 
+    max-width: 300px; 
+    margin: 10px auto; 
+  }
+
+  #proximas-agendas ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0;
+  }
+
+  #proximas-agendas ul li {
+    font-size: 14px; 
+    padding: 8px; 
+    width: 90%; 
+    margin: 5px 0; 
+  }
+
+  iframe {
+    width: 100%; 
+    height: auto; 
+  }
+
+  #proximas-agendas h2 {
+    font-size: 18px; 
+    text-align: center; 
+  }
+
+  .carrossel {
+    font-size: 24px; 
+    padding: 5px 0; 
+  }
+
+  footer {
+    padding: 10px; 
+    text-align: center; 
+  }
+}
+
+@media (max-width: 390px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("./assets/novo-fundo-mobile-pequeno.jpg") no-repeat center center fixed;
+    background-size: cover; 
+  }
+
+  .redes-sociais a {
+    font-size: 12px; 
+  }
+
+  .botao-estilizado {
+    font-size: 14px; 
+    padding: 8px 16px; 
+  }
+
+  #proximas-agendas ul li {
+    font-size: 12px; 
+    padding: 6px; 
+  }
+
+  .carrossel {
+    font-size: 20px; 
+  }
+
+  footer {
+    padding: 10px; 
+    text-align: center; 
+  }
+}
+
