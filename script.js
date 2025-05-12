@@ -1,6 +1,6 @@
 const API_KEY = 'AIzaSyByWTdouds1ybN9FxYJVXen8pY2QCRwck0'; 
 const CALENDAR_ID = encodeURIComponent('ejanetedaniel@gmail.com');
-const MAX_EVENTS = 5; 
+const MAX_EVENTS =40
 
 function carregarEventos() {
     gapi.load('client', () => {
